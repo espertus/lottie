@@ -1,5 +1,4 @@
-
->  ==**Announcement**==: As of 3.0 Lottie has been completely rewritten in Swift 4.2! For Objective-C support please use Lottie 2.5.3. Read Migration doc [Here](/ios-migration.md).
+**Announcement**: As of 3.0 Lottie has been completely rewritten in Swift 4.2! For Objective-C support please use Lottie 2.5.3. Read Migration doc [Here](/ios-migration.md).
 
 ## Contents
 
@@ -101,7 +100,7 @@ Read more about playing animations [Here](#playing-animations)
 The `Animation` model is the top level model object in Lottie. An `Animation` holds all of the animation data backing a Lottie Animation. `Animations` are deserialized from JSON.
 Codable; see JSON schema [here](https://github.com/airbnb/lottie-web/tree/master/docs/json).
 
- `Animation` is also fully `codable`. ==Animations can be decoded, and encoded to JSON!==
+ `Animation` is also fully `codable`. **Animations can be decoded, and encoded to JSON!**
  
 ### Loading Animation
 There are a variety of ways to load an `Animation` on its own. Additionally you can load an animation while allocating an `AnimationView` through one of the convenience initializers on `AnimationView`.
@@ -230,7 +229,7 @@ AnimationView.play(fromMarker: String?, toMarker: String, loopMode: LottieLoopMo
 ```
 Plays the animation from a named marker to another marker. Markers are point in time that are encoded into the Animation data and assigned a name.
 Read more on Markers [here](#using-markers)
-==NOTE==: If markers are not found the play command will exit. 
+**NOTE** If markers are not found the play command will exit. 
 
 Parameters:
 : **fromMarker**: The start marker for the animation playback. If `nil` the animation will start at the current progress. (Optional)
@@ -318,7 +317,7 @@ Returns `true` if the animation is currently playing, `false` if it is not.
 var AnimationView.shouldRasterizeWhenIdle: Bool { get set }
 ```
 When `true` the animation view will rasterize its contents when not animating. Rasterizing will improve performance of static animations.
-==Note:== this will not produce crisp results at resolutions above the animation's natural resolution.
+**Note:** this will not produce crisp results at resolutions above the animation's natural resolution.
 
 Defaults to `false`
 #
@@ -342,21 +341,22 @@ Defaults to `1`
 var AnimationView.currentProgress: AnimationProgressTime { get set }
 ```
 Sets the current animation time with a Progress Time. Returns the current Progress Time, or the final Progress Time if an animation is in progress.
-==Note==: Setting this will stop the current animation, if any.
+**Note**: Setting this will stop the current animation, if any.
 #
 #### Current Time
 ```swift
 var AnimationView.currentTime: TimeInterval { get set }
 ```
 Sets the current animation time with a TimeInterval. Returns the current TimeInterval, or the final TimeInterval if an animation is in progress.
-==Note==: Setting this will stop the current animation, if any.
+
+**Note**: Setting this will stop the current animation, if any.
 #
 #### Current Frame
 ```swift
 var AnimationView.currentFrame: AnimationFrameTime { get set }
 ```
 Sets the current animation time with a Frame Time. Returns the current  Frame Time, or the final  Frame Time if an animation is in progress.
-==Note==: Setting this will stop the current animation, if any.
+**Note**: Setting this will stop the current animation, if any.
 #
 #### Realtime Frame
 ```swift
@@ -478,7 +478,7 @@ animationView.setNodeIsEnabled(isEnabled: true, keypath: keypath1)
 AnimationView.addSubview(_ subview: AnimationSubview, forLayerAt keypath: AnimationKeypath)
 ```
 Searches for the nearest child layer to the first Keypath and adds the subview to that layer. The subview will move and animate with the child layer. Furthermore the subview will be in the child layers coordinate space.
-==Note==: if no layer is found for the keypath, then nothing happens.
+**Note**: if no layer is found for the keypath, then nothing happens.
 
 Parameters
 : **subview**: The subview to add to the found animation layer.
